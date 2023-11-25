@@ -116,3 +116,13 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(sizes.width, sizes.height);
 });
+
+window.addEventListener("dblclick", () => {
+  if (!document.fullscreenElement) {
+    // go fullscreen
+    canvas.requestFullscreen();
+  } else {
+    //leave fullscreen
+    document.exitFullscreen();
+  }
+});
